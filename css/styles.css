@@ -7,8 +7,7 @@
   --color-cornflower: #e7e9fc;
   --hover-color: #404bbf;
   --company-logo-color: #8e8f99;
-  --transition-duration: 250ms;
-  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-var: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -175,21 +174,32 @@ img {
   margin-left: 76px;
 }
 
-::after {
-  text-decoration: underline;
-  background: #404bbf;
+.nav-index::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  margin: 0 auto;
+  left: 0;
+  bottom: 0;
+  background-color: var(--hover-color);
   border-radius: 2px;
 }
 .menu-link {
   color: var(--title-color);
   font-weight: 500;
-  transition: all var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
 }
-
+.menu-item {
+  position: relative;
+  display: block;
+}
 .menu-link:hover,
 .menu-link:focus {
   color: var(--hover-color);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  content: "";
+  transition: var(--transition-var);
 }
 
 /* Contacts */
@@ -210,7 +220,8 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--hover-color);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  content: "";
+  transition: var(--transition-var);
 }
 
 /*========================Hero========================*/
@@ -256,7 +267,8 @@ img {
 .hero-btn:focus {
   background-color: var(--hover-color);
   color: var(--white-color);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  content: "";
+  transition: var(--transition-var);
 }
 
 /*========================Features========================*/
@@ -351,7 +363,8 @@ img {
 .team-soc-link:hover,
 .team-soc-link:focus {
   background-color: var(--hover-color);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  content: "";
+  transition: var(--transition-var);
 }
 
 /*========================Footer========================*/
@@ -410,7 +423,8 @@ img {
   border-color: var(--hover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
+  content: "";
 }
 
 .portfolio-list {
@@ -427,10 +441,9 @@ img {
 }
 
 .portfolio-item:hover {
-  border: 1px solid var(--color-cloud);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
 }
 
 .portfolio-list-item {
@@ -451,7 +464,7 @@ img {
   border: 1px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
 }
 .portfolio-item-img-wrapper {
   position: relative;
@@ -460,7 +473,7 @@ img {
 .overlay {
   background-color: var(--accent-color);
   color: var(--color-cloud);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
   transform: translate(0, 100%);
   content: "";
   overflow: auto;
@@ -479,7 +492,8 @@ img {
 .portfolio-item:hover .overlay,
 .portfolio-item:focus .overlay {
   transform: translate(0, 0);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
+  content: "";
 }
 
 /*========================Customers======================== */
@@ -518,13 +532,15 @@ img {
 .customers-link:hover,
 .customers-link:focus {
   border: 1px solid var(--hover-color);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
+  content: "";
 }
 
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
   fill: var(--hover-color);
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
+  content: "";
 }
 
 /* ======================================== */
@@ -548,7 +564,8 @@ img {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: #31d0aa;
-  transition: var(--transition-duration) var(--transition-timing-function);
+  transition: var(--transition-var);
+  content: "";
 }
 
 .social-list {
