@@ -44,6 +44,11 @@ img {
   list-style: none;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 /*========================Components========================*/
 
 .visually-hidden {
@@ -177,7 +182,7 @@ img {
 .nav-index::after {
   position: absolute;
   content: "";
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 4px;
   margin: 0 auto;
