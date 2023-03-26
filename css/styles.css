@@ -175,6 +175,11 @@ img {
   margin-left: 76px;
 }
 
+::after {
+  text-decoration: underline;
+  background: #404bbf;
+  border-radius: 2px;
+}
 .menu-link {
   color: var(--title-color);
   font-weight: 500;
@@ -184,6 +189,7 @@ img {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--hover-color);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 /* Contacts */
@@ -204,6 +210,7 @@ img {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--hover-color);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 /*========================Hero========================*/
@@ -249,6 +256,7 @@ img {
 .hero-btn:focus {
   background-color: var(--hover-color);
   color: var(--white-color);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 /*========================Features========================*/
@@ -343,6 +351,7 @@ img {
 .team-soc-link:hover,
 .team-soc-link:focus {
   background-color: var(--hover-color);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 /*========================Footer========================*/
@@ -401,6 +410,7 @@ img {
   border-color: var(--hover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-list {
@@ -420,6 +430,7 @@ img {
   border: 1px solid var(--color-cloud);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-list-item {
@@ -440,6 +451,7 @@ img {
   border: 1px solid #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 .portfolio-item-img-wrapper {
   position: relative;
@@ -467,6 +479,7 @@ img {
 .portfolio-item:hover .overlay,
 .portfolio-item:focus .overlay {
   transform: translate(0, 0);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 /*========================Customers======================== */
@@ -505,11 +518,13 @@ img {
 .customers-link:hover,
 .customers-link:focus {
   border: 1px solid var(--hover-color);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
   fill: var(--hover-color);
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 /* ======================================== */
@@ -533,6 +548,7 @@ img {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: #31d0aa;
+  transition: var(--transition-duration) var(--transition-timing-function);
 }
 
 .social-list {
